@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class Google extends Controller
 {
     private $default_provider = 'Google';
-    private $default_role = 2;
+    private $default_role = 1;
     private $default_ban = 0;
     
     public function redirect(){

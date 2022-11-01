@@ -15,9 +15,8 @@ use Illuminate\Support\Str;
 
 class Ordinary extends Controller
 {
-
-    private $default_role = 1;
     private $default_provider = "Default";
+    private $default_role = 1;
     private $default_banned = 0;
 
     public function register(RegisterUser $request){
@@ -54,7 +53,6 @@ class Ordinary extends Controller
 
                 return response()->json([
                     "token" => $request->user()->createToken("API TOKEN")->plainTextToken,
-                    "user"  => $request->user(),
                 ], 200);
             }
 
